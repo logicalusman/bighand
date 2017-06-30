@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:clickable="true"
+    android:longClickable="true"
+    app:cardBackgroundColor="@color/colorListRow"
+    app:cardCornerRadius="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/shopping_item_row_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="3dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            style="@style/ListRowSelectionCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            style="@style/ListRowMainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            app:layout_constraintLeft_toRightOf="@+id/checkbox"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/brand_label_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/brand2"
+            app:layout_constraintLeft_toLeftOf="@+id/description_tv"
+            app:layout_constraintTop_toBottomOf="@+id/description_tv"
+            tools:layout_constraintLeft_creator="1" />
+
+        <TextView
+            android:id="@+id/brand_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintLeft_toLeftOf="@+id/quantity_tv"
+            app:layout_constraintLeft_toRightOf="@+id/brand_label_tv"
+            app:layout_constraintTop_toTopOf="@+id/brand_label_tv" />
+
+        <TextView
+            android:id="@+id/quantity_label_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/quantity2"
+            app:layout_constraintLeft_toLeftOf="@+id/description_tv"
+            app:layout_constraintTop_toBottomOf="@+id/brand_label_tv" />
+
+        <TextView
+            android:id="@+id/quantity_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/quantity_label_tv"
+            app:layout_constraintTop_toTopOf="@+id/quantity_label_tv" />
+
+
+        <TextView
+            android:id="@+id/price_label_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/price2"
+            app:layout_constraintLeft_toLeftOf="@+id/description_tv"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_label_tv" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            style="@style/ListRowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintLeft_toLeftOf="@+id/quantity_tv"
+            app:layout_constraintLeft_toRightOf="@+id/price_label_tv"
+            app:layout_constraintTop_toTopOf="@+id/price_label_tv" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_label_tv">
+
+            <ImageView
+                android:id="@+id/barcode_iv"
+                style="@style/ListRowIcon"
+                android:layout_marginRight="35dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_barcode_white"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintRight_toLeftOf="@+id/share_iv" />
+
+            <ImageView
+                android:id="@+id/share_iv"
+                style="@style/ListRowIcon"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_share_white"
+                app:layout_constraintLeft_toRightOf="@+id/barcode_iv"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

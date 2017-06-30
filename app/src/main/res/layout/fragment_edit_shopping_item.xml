@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBg"
+    android:isScrollContainer="true"
+    tools:context=".ui.fragment.ShoppingListFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/desc_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:maxLines="5"
+            app:layout_constraintLeft_toLeftOf="@+id/desc_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/desc_label_tv" />
+
+
+        <TextView
+            android:id="@+id/brand_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/brand"
+            app:layout_constraintLeft_toLeftOf="@+id/desc_tv"
+            app:layout_constraintTop_toBottomOf="@+id/desc_tv" />
+
+        <TextView
+            android:id="@+id/brand_tv"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="@+id/brand_label_tv"
+            app:layout_constraintTop_toBottomOf="@+id/brand_label_tv" />
+
+        <EditText
+            android:id="@+id/quantity_et"
+            style="@style/Text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/quantity"
+            android:inputType="number"
+            android:text="1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/decrease_iv"
+            app:layout_constraintTop_toBottomOf="@+id/brand_tv" />
+
+        <ImageButton
+            android:id="@+id/decrease_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_remove_white"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity_et"
+            app:layout_constraintLeft_toRightOf="@+id/quantity_et"
+            app:layout_constraintRight_toLeftOf="@+id/increase_iv"
+            app:layout_constraintTop_toTopOf="@+id/quantity_et"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <ImageButton
+            android:id="@+id/increase_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_add_white"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity_et"
+            app:layout_constraintLeft_toRightOf="@+id/decrease_iv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/quantity_et"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/currency_symbol_tv"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="£"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/price_et"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_et" />
+
+        <EditText
+            android:id="@+id/price_et"
+            style="@style/Text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="@+id/currency_symbol_tv"
+            app:layout_constraintLeft_toRightOf="@+id/currency_symbol_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/currency_symbol_tv" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".8" />
+
+        <Button
+            android:id="@+id/save_btn"
+            style="@style/AppButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/save_changes"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toRightOf="@+id/guideline1"
+            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/price_et" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

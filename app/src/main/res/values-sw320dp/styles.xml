@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="ListRowMainText">
+        <item name="android:textColor">@color/colorLabelText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ListRowText" parent="ListRowMainText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ListRowIcon">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:tint">@color/colorListIcon</item>
+    </style>
+
+    <style name="ListRowSelectionCheckBox">
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="LabelText">
+        <item name="android:textColor">@color/colorLabelText</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+</resources>
